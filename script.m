@@ -18,10 +18,20 @@ y = data(:,14);
 X = [ones(m, 1) X];
 %w = trainSamples(X,y);
  %% evaluate
- for trainSize=[10,50,100,200,300,400]
+    A = [10,50,100,200,300,400];
+    plotData = zeros(length(A),2);
+    i = 1;
+ for trainSize=A
      [trainErr,testErr] = evaluate(X(1:trainSize,:),y(1:trainSize),X(trainSize+1:end,:),y(trainSize+1:end));
+     plotData(i,1) = trainErr;
+     plotData(i,2) = testErr;
+     i = i + 1;
      fprintf('for %d training samples: trainErr:%f testErr:%f\n',trainSize,trainErr,testErr);
  end
+ bar(plotData);
+ 
+ 
+ 
  
  
  
