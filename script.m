@@ -1,5 +1,7 @@
 
-%% Initialization
+%% Question 1
+
+% Initialization
 clear ; close all; clc
 %  The first two columns contains the exam scores and the third column
 %  contains the label.
@@ -17,7 +19,7 @@ y = data(:,14);
 % Add intercept term to x and X_test
 X = [ones(m, 1) X];
 %w = trainSamples(X,y);
- %% evaluate
+% evaluate
     A = [10,50,100,200,300,400];
     plotData = zeros(length(A),2);
     i = 1;
@@ -29,6 +31,14 @@ X = [ones(m, 1) X];
      fprintf('for %d training samples: trainErr:%f testErr:%f\n',trainSize,trainErr,testErr);
  end
  bar(plotData);
+ %% Question 2
+ % Initialization
+clear ; close all; clc
+P3 = load('P3.mat');
+
+
+
+ 
  
  
  
