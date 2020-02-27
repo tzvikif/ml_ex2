@@ -18,6 +18,6 @@ function [Y,V] = lda(class1,class2,class3,dim)
     Y2 = V(:,1:dim)'*class2';
     Y3 = V(:,1:dim)'*class3';
     
-    Y = [Y1;Y2;Y3];
+    Y = [Y1,Y2,Y3];
 end
  
