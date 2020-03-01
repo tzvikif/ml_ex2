@@ -1,7 +1,5 @@
-function showBar(confMat,Name)
-    if nargin==2
-        figure('Name',Name,'NumberTitle','off');
-    end
+function showBar(confMat,titleName)
+    figure('Name',titleName,'NumberTitle','off');
     name = {'Class 1';'Class2 ';'Class 3'};
     x = (1:3);
     b = bar(x,confMat);
@@ -16,5 +14,5 @@ function showBar(confMat,Name)
     labels2 = string(b(2).YData);
     text(xtips2,ytips2,labels2,'HorizontalAlignment','center',...
         'VerticalAlignment','bottom')
-    legend(b(:),{"Success","Failure"})
+    legend(b(:),["Success","Failure"]);
 end

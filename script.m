@@ -34,6 +34,8 @@ X = [ones(m, 1) X];
  x = (1:6);
  b = bar(x,plotData);
  set(gca,'xticklabel',name);
+ legend(b(:),["Training","Test"]);
+ 
   %% Question 2 a+b
 % Initialization
 clear;close all; clc
@@ -96,7 +98,6 @@ for i=1:3
             confMat2(i,2) = confMat2(i,2) + 1;
         end
         t1 = circshift(t1,-1);
-        
     end
 end
 showBar(confMat2,'MDA: 2 dimentions');
