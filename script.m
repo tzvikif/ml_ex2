@@ -99,7 +99,7 @@ for i=1:3
         
     end
 end
-showBar(confMat2);
+showBar(confMat2,'MDA: 2 dimentions');
 %% Question 2.c one dimenstions
 close all;
 c1 = Y1(1:r)';
@@ -133,7 +133,7 @@ for i=1:3
         t1 = circshift(t1,-1);
     end
 end
-showBar(confMat1);
+showBar(confMat1,'MDA: 1 dimention');
 %% 2.d MSE
 confMatMSE = zeros(3,2);
 c1 = P3.class1;
@@ -168,9 +168,9 @@ for i=1:150
     B(3*r,:) = rowGroundTruth;
     Y(3*r,:) = CVsample;
 end
-showBar(confMatMSE);
+showBar(confMatMSE,'MSE with original Data');
 
-%% 2.d MSE using after MDA
+%% 2.d MSE  after MDA
 % Initialization
 clear;close all; clc
 P3 = load('P3.mat');
@@ -209,7 +209,7 @@ for i=1:150
     B(3*r,:) = rowGroundTruth;
     Y(3*r,:) = CVsample;
 end
-showBar(confMatMSE);
+showBar(confMatMSE,'MSE on MDA');
 
 
 
